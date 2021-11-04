@@ -20,10 +20,18 @@ class App extends React.Component {
     }
   }
 
+  handleChangeColor = () => {
+    this.setState({
+      colorIndex: this.state.colorIndex + 1
+    })
+  }
+
   render(){
+    const { possibleColors, colorIndex } = this.state
     return (
-      <div className={ this.state.possibleColors[0] }>
-        hi
+      <div className={ possibleColors[colorIndex] }>
+        <h1>Color Picker</h1>
+        <button onClick={ this.handleChangeColor }>Change color!</button>
       </div>
     )
   }

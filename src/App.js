@@ -30,7 +30,8 @@ class App extends React.Component {
     const nextIndex = (colorIndex + 1) % possibleColors.length;
 
     this.setState({
-      colorIndex: nextIndex,
+      colorIndex: Math.floor(Math.random() * 8),
+      // colorIndex: nextIndex,
     })
   }
 

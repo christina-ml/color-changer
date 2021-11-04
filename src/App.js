@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      possibleColors: [
+        'rebecca-purple',
+        'cadet-blue',
+        'dark-goldenrod',
+        'pinstripe-blue',
+        'hotpink',
+        'dark-green',
+        'ghost-white',
+        'banana-yellow'
+      ],
+      colorIndex: 0,
+    }
+  }
+
+  render(){
+    return (
+      <div className={ this.state.possibleColors[0] }>
+        hi
+      </div>
+    )
+  }
 }
 
 export default App;
